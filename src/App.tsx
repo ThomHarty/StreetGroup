@@ -1,6 +1,12 @@
 import React, {ReactElement} from 'react';
-import {View} from 'react-native';
+import {SafeAreaView} from 'react-native';
+import {Button, Typography} from './ui/atoms';
 
 export const App = (): ReactElement => {
-  return <View />;
+  return (
+    <SafeAreaView>
+      <Typography text="title" />
+      <Button title="button" onPress={() => {}} />
+    </SafeAreaView>
+  );
 };
