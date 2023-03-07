@@ -6,12 +6,14 @@ import {useStyles} from './useStyles';
 import {IBankHolidayItemProps} from './BankHolidayItem.types';
 
 export const BankHolidayItem = memo(
-  ({title, date}: IBankHolidayItemProps): ReactElement => {
+  ({title, date, notes, bunting}: IBankHolidayItemProps): ReactElement => {
     const styles = useStyles();
     return (
       <View style={styles.container}>
         <Typography {...title} />
         <Typography {...date} />
+        <Typography {...notes} />
+        {bunting && <Typography text="Bunting required" />}
       </View>
     );
   },

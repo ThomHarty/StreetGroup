@@ -4,6 +4,8 @@ import {ITypographyProps} from '../../atoms';
 export interface IBankHolidayItemProps {
   title: ITypographyProps;
   date: ITypographyProps;
+  notes: ITypographyProps;
+  bunting: boolean;
 }
 
 export interface IBankHolidayItemStyles {
