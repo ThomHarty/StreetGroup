@@ -4,25 +4,13 @@ import {
   BankHolidaysTemplate,
   IBankHolidaysTemplateProps,
 } from '../../ui/templates';
+import {useBankHolidays} from './hooks';
 
 export const BankHolidays = (): ReactElement => {
+  const bankHolidays = useBankHolidays();
+
   const props: IBankHolidaysTemplateProps = {
-    bankHolidays: {
-      list: [
-        {
-          title: {text: 'One'},
-          date: {text: 'Today'},
-          notes: {text: 'First'},
-          bunting: false,
-        },
-        {
-          title: {text: 'Two'},
-          date: {text: 'Tomorrow'},
-          notes: {text: 'Second'},
-          bunting: true,
-        },
-      ],
-    },
+    bankHolidays,
   };
 
   return <BankHolidaysTemplate {...props} />;
