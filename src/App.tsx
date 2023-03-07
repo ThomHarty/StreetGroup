@@ -3,7 +3,7 @@ import {SafeAreaView} from 'react-native';
 import {Provider} from 'react-redux';
 
 import {store} from './store';
-import {BankHolidaysList} from './ui/organisms';
+import {BankHolidaysTemplate} from './ui/templates';
 
 export const App = (): ReactElement => {
   const list = [
@@ -13,7 +13,7 @@ export const App = (): ReactElement => {
   return (
     <Provider store={store}>
       <SafeAreaView>
-        <BankHolidaysList list={list} />
+        <BankHolidaysTemplate bankHolidays={{list}} />
       </SafeAreaView>
     </Provider>
   );
