@@ -10,10 +10,22 @@ export const BankHolidayItem = memo(
     const styles = useStyles();
     return (
       <View style={styles.container}>
-        <Typography {...title} />
-        <Typography {...date} />
-        <Typography {...notes} />
-        {bunting && <Typography text="Bunting required" />}
+        <View style={styles.titleContainer}>
+          <Typography {...title} size="subHeading" />
+        </View>
+        <View style={styles.textContainer}>
+          <Typography {...date} />
+        </View>
+        {notes.text && (
+          <View style={styles.textContainer}>
+            <Typography {...notes} />
+          </View>
+        )}
+        {bunting && (
+          <View style={styles.textContainer}>
+            <Typography text="Bunting required" size="small" />
+          </View>
+        )}
       </View>
     );
   },

@@ -10,4 +10,6 @@ export interface IBankHolidayItemProps {
 
 export interface IBankHolidayItemStyles {
   container?: ViewStyle;
+  titleContainer?: ViewStyle;
+  textContainer?: ViewStyle;
 }

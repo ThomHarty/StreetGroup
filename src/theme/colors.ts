@@ -1,8 +1,8 @@
 export const COLORS = {
   WHITE: '#FFF',
-  BLACK: '#101010',
-  BRAND: '#4052DE',
-  BRAND_FAINT: '#CBD1FE',
+  BLACK: '#1E1F1F',
+  BRAND: '#64BD9E',
+  BRAND_FAINT: '#B5F5DD',
   BRAND_DARK: '#151EBD',
-  GREY: '#999',
+  GREY: '#F6F6F6',
 };
