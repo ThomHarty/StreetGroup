@@ -1,9 +1,9 @@
 import {useEffect} from 'react';
+import moment from 'moment';
 
 import {IBankHolidaysTemplateProps} from '../../../ui/templates';
 import {listBankHolidays} from '../../../store/bankHolidays';
 import {useAppDispatch, useAppSelector} from '../../../store/hooks';
-import moment from 'moment';
 
 export const useBankHolidays =
   (): IBankHolidaysTemplateProps['bankHolidays'] => {
