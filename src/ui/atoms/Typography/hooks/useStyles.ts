@@ -1,23 +1,28 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, TextStyle} from 'react-native';
 
 import {COLORS} from '../../../../theme/colors';
 import {TypographyStyles, TypographyStylesProps} from '../Typography.types';
 
 export const useStyles = ({size}: TypographyStylesProps) => {
-  let fontSize;
+  let fontSize: TextStyle['fontSize'];
+  let fontWeight: TextStyle['fontWeight'] = 'normal';
+  let opacity: TextStyle['opacity'] = 1;
 
   switch (size) {
     case 'heading':
-      fontSize = 30;
+      fontSize = 24;
       break;
     case 'subHeading':
-      fontSize = 24;
+      fontSize = 21;
+      fontWeight = 'bold';
       break;
     case 'paragraph':
       fontSize = 18;
+      opacity = 0.7;
       break;
     case 'small':
       fontSize = 13;
+      opacity = 0.7;
       break;
   }
 
@@ -25,6 +30,8 @@ export const useStyles = ({size}: TypographyStylesProps) => {
     text: {
       color: COLORS.BLACK,
       fontSize,
+      fontWeight,
+      opacity,
     },
   });
 

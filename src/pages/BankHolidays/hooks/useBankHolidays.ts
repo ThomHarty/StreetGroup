@@ -3,6 +3,7 @@ import {useEffect} from 'react';
 import {IBankHolidaysTemplateProps} from '../../../ui/templates';
 import {listBankHolidays} from '../../../store/bankHolidays';
 import {useAppDispatch, useAppSelector} from '../../../store/hooks';
+import moment from 'moment';
 
 export const useBankHolidays =
   (): IBankHolidaysTemplateProps['bankHolidays'] => {
@@ -18,7 +19,7 @@ export const useBankHolidays =
     const list = holidays.map(holiday => {
       return {
         title: {text: holiday.title},
-        date: {text: holiday.date},
+        date: {text: moment(holiday.date).format('MMM Do, YYYY')},
         notes: {text: holiday.notes},
         bunting: holiday.bunting,
       };

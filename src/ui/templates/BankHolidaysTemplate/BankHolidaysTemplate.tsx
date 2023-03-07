@@ -1,5 +1,5 @@
 import React, {ReactElement} from 'react';
-import {View} from 'react-native';
+import {SafeAreaView, ScrollView} from 'react-native';
 import {BankHolidaysList} from '../../organisms';
 
 import {useStyles} from './hooks';
@@ -10,8 +10,10 @@ export const BankHolidaysTemplate = ({
 }: IBankHolidaysTemplateProps): ReactElement => {
   const styles = useStyles();
   return (
-    <View style={styles.container}>
-      <BankHolidaysList {...bankHolidays} />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <BankHolidaysList {...bankHolidays} />
+      </ScrollView>
+    </SafeAreaView>
   );
 };
