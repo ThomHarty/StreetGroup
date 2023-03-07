@@ -1,5 +1,6 @@
 import {ActionReducerMapBuilder, PayloadAction} from '@reduxjs/toolkit';
 import moment from 'moment';
+import _ from 'lodash';
 
 import {IBankHolidayState} from '../bankHolidays.types';
 import {listBankHolidays} from './listBankHolidays.thunk';
@@ -22,17 +23,13 @@ export const listBankHolidaysBuilder = (
       const now = moment();
       const sixMonths = moment().add(6, 'months');
 
-      const bankHolidays = [
-        ...new Set([
-          ...action.payload['england-and-wales'].events,
-          ...action.payload.scotland.events,
-          ...action.payload['northern-ireland'].events,
-        ]),
-      ]
-        .filter(({date}) => {
-          return moment(date).isBetween(now, sixMonths);
-        })
-        .slice(0, 5);
+      const bankHolidays = _.chain(action.payload)
+        .flatMap('events')
+        .filter(event => moment(event.date).isBetween(now, sixMonths))
+        .uniqBy(event => event.title + event.date)
+        .sortBy(event => event.date)
+        .take(5)
+        .value();
 
       state.bankHolidays = bankHolidays;
     },
