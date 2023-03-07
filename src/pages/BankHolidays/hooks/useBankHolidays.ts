@@ -1,6 +1,6 @@
 import {useEffect} from 'react';
-import {IBankHolidaysTemplateProps} from '../../../ui/templates';
 
+import {IBankHolidaysTemplateProps} from '../../../ui/templates';
 import {listBankHolidays} from '../../../store/bankHolidays';
 import {useAppDispatch, useAppSelector} from '../../../store/hooks';
 
