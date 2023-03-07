@@ -3,17 +3,13 @@ import {SafeAreaView} from 'react-native';
 import {Provider} from 'react-redux';
 
 import {store} from './store';
-import {BankHolidaysTemplate} from './ui/templates';
+import {BankHolidays} from './pages';
 
 export const App = (): ReactElement => {
-  const list = [
-    {title: {text: 'One'}, date: {text: 'Today'}},
-    {title: {text: 'Two'}, date: {text: 'Tomorrow'}},
-  ];
   return (
     <Provider store={store}>
       <SafeAreaView>
-        <BankHolidaysTemplate bankHolidays={{list}} />
+        <BankHolidays />
       </SafeAreaView>
     </Provider>
   );
