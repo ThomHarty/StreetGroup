@@ -4,8 +4,7 @@ import Animated from 'react-native-reanimated';
 
 import {COLORS} from '../../../theme/colors';
 import {IInputProps} from './Input.types';
-import {useColors} from './useColors';
-import {useStyles} from './useStyles';
+import {useColors, useStyles} from './hooks';
 
 export const Input = memo(
   ({label, placeholder, value, onChangeText}: IInputProps): ReactElement => {

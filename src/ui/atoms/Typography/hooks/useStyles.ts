@@ -1,7 +1,7 @@
 import {StyleSheet} from 'react-native';
 
-import {COLORS} from '../../../theme/colors';
-import {TypographyStyles, TypographyStylesProps} from './Typography.types';
+import {COLORS} from '../../../../theme/colors';
+import {TypographyStyles, TypographyStylesProps} from '../Typography.types';
 
 export const useStyles = ({size}: TypographyStylesProps) => {
   let fontSize;
