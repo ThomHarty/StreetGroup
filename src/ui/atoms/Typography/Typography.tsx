@@ -2,7 +2,7 @@ import React, {memo, ReactElement} from 'react';
 import {Text} from 'react-native';
 
 import {ITypographyProps} from './Typography.types';
-import {useStyles} from './useStyles';
+import {useStyles} from './hooks';
 
 export const Typography = memo(
   ({text, size = 'paragraph'}: ITypographyProps): ReactElement => {

@@ -1,8 +1,8 @@
 import {useAnimatedStyle, interpolateColor} from 'react-native-reanimated';
 
-import {useColorInterpolation} from '../../../shared/useColorInterpolation';
-import {COLORS} from '../../../theme/colors';
-import {UseColorsProps} from './Button.types';
+import {useColorInterpolation} from '../../../../shared/useColorInterpolation';
+import {COLORS} from '../../../../theme/colors';
+import {UseColorsProps} from '../Button.types';
 
 export const useColors = ({isPressing}: UseColorsProps) => {
   const shared = useColorInterpolation({check: isPressing});

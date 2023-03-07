@@ -3,8 +3,7 @@ import {Pressable, Text} from 'react-native';
 import Animated from 'react-native-reanimated';
 
 import {IButtonProps} from './Button.types';
-import {useColors} from './useColors';
-import {useStyles} from './useStyles';
+import {useColors, useStyles} from './hooks';
 
 export const Button = memo(
   ({title, onPress, disabled}: IButtonProps): ReactElement => {

@@ -1,7 +1,7 @@
 import {StyleSheet} from 'react-native';
 
-import {COLORS} from '../../../theme/colors';
-import {InputStyles} from './Input.types';
+import {COLORS} from '../../../../theme/colors';
+import {InputStyles} from '../Input.types';
 
 export const useStyles = () => {
   const styles: InputStyles = StyleSheet.create({

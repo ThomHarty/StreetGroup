@@ -1,6 +1,6 @@
 import {StyleSheet} from 'react-native';
-import {COLORS} from '../../../theme/colors';
-import {ButtonStyles} from './Button.types';
+import {COLORS} from '../../../../theme/colors';
+import {ButtonStyles} from '../Button.types';
 
 export const useStyles = () => {
   const styles: ButtonStyles = StyleSheet.create({

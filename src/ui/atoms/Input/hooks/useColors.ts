@@ -1,8 +1,8 @@
 import {useAnimatedStyle, interpolateColor} from 'react-native-reanimated';
 
-import {useColorInterpolation} from '../../../shared/useColorInterpolation';
-import {COLORS} from '../../../theme/colors';
-import {UseColorsProps} from './Input.types';
+import {useColorInterpolation} from '../../../../shared/useColorInterpolation';
+import {COLORS} from '../../../../theme/colors';
+import {UseColorsProps} from '../Input.types';
 
 export const useColors = ({isFocused}: UseColorsProps) => {
   const shared = useColorInterpolation({check: isFocused});
