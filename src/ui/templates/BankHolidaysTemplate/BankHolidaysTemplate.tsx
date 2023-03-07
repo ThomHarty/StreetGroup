@@ -2,7 +2,7 @@ import React, {ReactElement} from 'react';
 import {View} from 'react-native';
 import {BankHolidaysList} from '../../organisms';
 
-import {useStyles} from './BankHolidaysTemplate.styles';
+import {useStyles} from './useStyles';
 import {IBankHolidaysTemplateProps} from './BankHolidaysTemplate.types';
 
 export const BankHolidaysTemplate = ({

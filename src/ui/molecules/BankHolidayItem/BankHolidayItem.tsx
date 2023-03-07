@@ -2,7 +2,7 @@ import React, {memo, ReactElement} from 'react';
 import {View} from 'react-native';
 
 import {Typography} from '../../atoms';
-import {useStyles} from './BankHolidayItem.styles';
+import {useStyles} from './useStyles';
 import {IBankHolidayItemProps} from './BankHolidayItem.types';
 
 export const BankHolidayItem = memo(
