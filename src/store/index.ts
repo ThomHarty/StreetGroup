@@ -1,7 +1,11 @@
 import {configureStore} from '@reduxjs/toolkit';
 
+import {bankHolidaysReducer} from './bankHolidays/bankHolidays.slice';
+
 export const store = configureStore({
-  reducer: {},
+  reducer: {
+    bankHolidays: bankHolidaysReducer,
+  },
 });
 
 export type RootState = ReturnType<typeof store.getState>;
