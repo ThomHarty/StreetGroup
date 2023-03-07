@@ -4,7 +4,7 @@ import {IBankHolidayState} from '../bankHolidays.types';
 import {listBankHolidays} from './listBankHolidays.thunk';
 import {IListBankHolidaysResponse} from './listBankHolidays.types';
 
-export const listBankHolidayBuilder = (
+export const listBankHolidaysBuilder = (
   builder: ActionReducerMapBuilder<IBankHolidayState>,
 ) => {
   builder.addCase(listBankHolidays.pending, state => {
